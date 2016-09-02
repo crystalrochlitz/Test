@@ -37,5 +37,8 @@ public with sharing class InlineDesignRequestController {
         }
     } //End Constructor
 
+    public void dummy () {
+        System.debug('Test');
+    }
     
 }
