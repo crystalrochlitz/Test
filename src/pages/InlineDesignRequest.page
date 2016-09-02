@@ -3,7 +3,7 @@
 	<apex:stylesheet value="{!URLFOR($Resource.SPStyleGuide, 'css/all.css')}"/>
 	<apex:stylesheet value="{!URLFOR($Resource.SPStyleGuide, 'javascripts/main.bundle.js')}"/>
 
-	<apex:dataTable styleClass="test" value="{!siteToDesignMap}" var="site">
+	<apex:dataTable styleClass="table" value="{!siteToDesignMap}" var="site">
 		<!--apex:column headerValue="Site">
 			<apex:repeat value="{!siteToDesignMap[site]}" var="design">
 				Value: {!design}
@@ -11,5 +11,5 @@
 		</apex:column-->
 	</apex:dataTable>
 
-	<p>THIS IS A TEST 2</p>
+	<p>THIS IS A TEST</p>
 </apex:page>
