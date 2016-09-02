@@ -1,0 +1,275 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false" docType="html-5.0">
+
+    <apex:stylesheet value="{!URLFOR($Resource.SPWR_Styleguide, '/dist/css/all.css')}"/>
+    <link rel="text/javascript" href="{!URLFOR($Resource.SPWR_Styleguide, '/dist/javascripts/main.bundle.js')}"/>
+
+    <style type="text/css">
+
+    	.topper {
+		    display: block;
+		    background-color: #0076be;
+		    color: #c0dae7;
+		    height: 1.25rem;
+		    width: 100%;
+		    margin-bottom: 20px;
+		}
+
+		h4 {
+			margin-bottom: .5rem !important;
+		}
+
+    	.page-header {
+		 	margin-bottom: 20px;
+		  	border-bottom: 1px solid #eee;
+		}
+
+		.section-header {
+			border-bottom: 2px solid #0073C5;
+			padding-left: 0px;
+			margin-bottom: .5rem;
+			margin-top: .5rem;
+		}
+
+		.pretty-inputs {
+			color: #0076be;
+			font-size: larger;
+			font-weight: 500;
+			border-radius: 4px;
+			background-color: #F4F4F4;
+			border: none;
+		}
+
+		.form-group label {
+		    font-weight: 600;
+		    font-size: .90rem;
+		    color: black;
+		    text-align: left;
+		    width: inherit;
+		}
+
+		.form-group .input-container {
+		    width: 100%; 
+		    display: inline-block;
+		    height: 2.5rem;
+		}
+
+		@media only screen and (min-width: 992px) {
+			ol.progress {
+		        display: table;
+		        list-style-type: none;
+		        margin-bottom: .5rem;
+		        padding: 0;
+		        table-layout: fixed;
+		        width: 100%;
+		    }
+		    ol.progress li {
+		        display: table-cell;
+		        text-align: center;
+		        line-height: 3.5em;
+		    }
+
+		    ol.progress[data-progress-steps="2"] li { width: 49%; }
+		    ol.progress[data-progress-steps="3"] li { width: 33%; }
+		    ol.progress[data-progress-steps="4"] li { width: 24%; }
+		    ol.progress[data-progress-steps="5"] li { width: 19%; }
+		    ol.progress[data-progress-steps="6"] li { width: 16%; }
+		    ol.progress[data-progress-steps="7"] li { width: 14%; }
+		    ol.progress[data-progress-steps="8"] li { width: 12%; }
+		    ol.progress[data-progress-steps="9"] li { width: 11%; }
+
+		    ol.progress li.progress-done {
+		        color: black;
+		        border-bottom: 4px solid #D8D8D8;
+		    }
+		    ol.progress li.progress-todo {
+		        color: black; 
+		        font-size: smaller;
+		        border-bottom: 4px solid #D8D8D8;
+		    }
+
+		    ol.progress li:after {
+		        content: "\00a0\00a0";
+		    }
+		    ol.progress li:before {
+		        position: relative;
+		        bottom: -2.5em;
+		        float: left;
+		        left: 50%;
+		        line-height: 1em;
+		    }
+		    ol.progress li.progress-done:before {
+		        content: "\2714";
+		        color: #FB9B31;
+		        background-color: white;
+		        height: 2em;
+		        width: 2em;
+		        line-height: 2em;
+		        border: solid;
+		        border-color: #FB9B31;
+		        border-radius: 2em;
+		    }
+		    ol.progress li.progress-todo:before {
+		        content: "";
+		        color: #FB9B31;
+		        background-color: white;
+		        height: 2em;
+		        width: 2em;
+		        line-height: 2em;
+		        border: solid;
+		        border-color: #FB9B31;
+		        border-radius: 2em;
+		    }
+	    }
+
+    </style>
+
+    <div class="container">
+	    <div class="topper"></div>
+
+		<div class="page-header">
+			<h3>Helix Design Request</h3>
+			<!--div class="sunpower-logo-black"></div-->
+		</div>
+
+		<div style="width: 90%; margin-left: auto; margin-right: auto;">
+			<div class="row" style="margin-bottom: 20px;">
+				<div class="show-mobile show-desktop">
+					<ol class="progress">
+	  					<li class="progress-todo">General Information</li>
+	  					<li class="progress-todo">Product Information</li>
+	  					<li class="progress-todo">Notes and Attachments</li>
+	  					<li class="progress-todo">Disclaimer</li>
+					</ol>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-xs-12 section-header">
+					<h4>Design Instructions</h4>
+				</div>
+			</div>
+
+			<div class="row">
+				<p style="color: #656565; font-size: smaller;">
+				The Design Request is the first step for the completion of your SunPower<span class="sup">&reg;</span> Commercial Solar System.
+				Please complete this Design Request with accurate information for the Commercial Design Team to be able to complete your Design Request promptly. You are responsible for the accuracy and completeness of the information provided to SunPower for timely turnaround.<br/>
+				For additional information please reach out to the Commercial Design Engineering Team via email to:<br/>
+				<a href="mailto:systemdesign.na@sunpowercorp.com?subject=Helix Design Request Inquiry">systemdesign.na@sunpowercorp.com</a>
+				</p>
+			</div>
+
+			<div class="row">
+				<div class="col-xs-12 section-header">
+					<h4>Dealer Information</h4>
+				</div>
+			</div>
+
+			<div class="row" style="padding-top: 10px;">
+				<div class="col-xs-6">
+					<div class="form-group">
+						<label>Dealer Name</label>
+						<input class="input-container pretty-inputs"></input>
+					</div>
+				</div>
+				<div class="col-xs-6">
+					<div class="form-group">
+						<label>Phone/Mobile</label>
+						<input class="input-container pretty-inputs"></input>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-6">
+					<div class="form-group">
+						<label>Project Contact Person</label>
+						<input class="input-container pretty-inputs"></input>
+					</div>
+				</div>
+				<div class="col-xs-6">
+					<div class="form-group">
+						<label>Email</label>
+						<input class="input-container pretty-inputs" type="email"></input>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-xs-12 section-header">
+					<h4>Opportunity and Site Details</h4>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-xs-6">
+					<div class="form-group">
+						<label>Site #</label>
+						<input class="input-container pretty-inputs"></input>
+					</div>
+				</div>
+				<div class="col-xs-6">
+					<div class="form-group">
+						<label>Street Address</label>
+						<input class="input-container pretty-inputs" type="email"></input>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-6">
+					<div class="form-group">
+						<label>Site Name</label>
+						<input class="input-container pretty-inputs"></input>
+					</div>
+				</div>
+				<div class="col-xs-6">
+					<div class="form-group">
+						<label>City</label>
+						<input class="input-container pretty-inputs" type="email"></input>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-6">
+					<div class="form-group">
+						<label>Nominal AC Voltage</label>
+						<input class="input-container pretty-inputs"></input>
+					</div>
+				</div>
+				<div class="col-xs-6">
+					<div class="form-group">
+						<label>State</label>
+						<input class="input-container pretty-inputs" type="email"></input>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-6">
+					<div class="form-group">
+						<label>Expected Installation Date</label>
+						<input class="input-container pretty-inputs" type="date"></input>
+					</div>
+				</div>
+				<div class="col-xs-6">
+					<div class="form-group">
+						<label>Zip Code</label>
+						<input class="input-container pretty-inputs" type="email"></input>
+					</div>
+				</div>
+			</div>
+
+			<div class="page-header"></div>
+
+			<div style="margin-bottom: 4rem;">
+				<button style="float: left;">Save &amp; Quit</button>
+				<button style="float: right;">Next</button>
+			</div>
+
+		</div>
+
+		<div class="footer" id="home">
+			<div class="footer-content">
+				<div class="bar"></div>
+			</div>
+		</div>
+    </div>
+	
+</apex:page>
